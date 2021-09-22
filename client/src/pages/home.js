@@ -8,7 +8,7 @@ export default function Home() {
       <ContentContainer>
         <MultiRangeSlider
           min={0}
-          max={1000}
+          max={24}
           onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
         />
       </ContentContainer>

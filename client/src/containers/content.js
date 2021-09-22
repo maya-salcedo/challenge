@@ -5,7 +5,16 @@ export function ContentContainer({ children }) {
   return (
     <Content>
       <Content.Title>I'm weekly available at</Content.Title>
-      <Content.Frame>{children}</Content.Frame>
+      <Content.Frame>
+        <Content.Group>
+          <Content.Day>Monday</Content.Day>
+          {children}
+        </Content.Group>
+        <Content.Group>
+          <Content.Day>Tuesday</Content.Day>
+          {children}
+        </Content.Group>
+      </Content.Frame>
       <Content.Button>Save</Content.Button>
     </Content>
   );

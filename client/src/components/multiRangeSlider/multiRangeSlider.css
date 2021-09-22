@@ -1,5 +1,5 @@
 .container {
-  height: 30vh;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
 
 .slider {
   position: relative;
-  width: 200px;
+  width: 500px;
 }
 
 .slider__track,
@@ -36,17 +36,18 @@
 
 .slider__left-value,
 .slider__right-value {
-  color: #dee2e6;
+  color: black;
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: -20px;
+  background-color: antiquewhite;
 }
 
 .slider__left-value {
-  left: 6px;
+  left: 210px;
 }
 
 .slider__right-value {
-  right: -4px;
+  right: 210px;
 }
 
 /* Removing the default appearance */
@@ -60,7 +61,7 @@
   pointer-events: none;
   position: absolute;
   height: 0;
-  width: 200px;
+  width: 500px;
   outline: none;
 }
 
