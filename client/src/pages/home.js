@@ -1,15 +1,17 @@
 import React from 'react';
-
-import HomeScreen from '../screens/HomeScreen';
-import { FooterContainer } from '../containers/footer';
-import { HeaderContainer } from '../containers/header';
+import MultiRangeSlider from '../components/multiRangeSlider/multiRangeSlider';
+import { ContentContainer } from '../containers/content';
 
 export default function Home() {
   return (
     <>
-      <HeaderContainer />
-      <HomeScreen />
-      <FooterContainer />
+      <ContentContainer>
+        <MultiRangeSlider
+          min={0}
+          max={1000}
+          onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+        />
+      </ContentContainer>
     </>
   );
 }

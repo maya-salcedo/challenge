@@ -1,15 +1,8 @@
-import MultiRangeSlider from './components/multiRangeSlider/multiRangeSlider';
+import React from 'react';
+import Home from './pages/home';
 
 const App = () => {
-  return (
-    <>
-      <MultiRangeSlider
-        min={0}
-        max={1000}
-        onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
-      />
-    </>
-  );
+  return <Home />;
 };
 
 export default App;
