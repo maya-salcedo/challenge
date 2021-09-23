@@ -1,21 +1,9 @@
 import React from 'react';
-import {
-  Base,
-  Button,
-  Container,
-  Day,
-  Frame,
-  Group,
-  Title,
-} from './styles/content';
+import { Button, Container, Day, Frame, Group, Title } from './styles/content';
 
 export default function Content({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
-
-Content.Base = function ContentBase({ children, ...restProps }) {
-  return <Base {...restProps}>{children}</Base>;
-};
 
 Content.Frame = function ContentFrame({ children, ...restProps }) {
   return <Frame {...restProps}>{children}</Frame>;

@@ -1,27 +1,22 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-`;
-
-export const Base = styled.div`
   box-sizing: content-box;
   background-color: #e6e6e6;
   border-radius: 0.5rem;
   padding: 1rem 3rem 3rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   width: min-content;
-  margin: 10rem auto 10rem auto;
+  margin: 5rem auto;
 
   @media (max-width: 1000px) {
     padding: 0.5rem 1rem 1.5rem;
+    margin: 2rem auto;
   }
 
   @media (max-width: 700px) {
-    padding: 0.2rem 0.2rem 1.5rem;
+    padding: 0.1rem 0.1rem 1rem;
+    margin: 0.2rem;
   }
 `;
 
@@ -49,8 +44,8 @@ export const Group = styled.div`
 `;
 
 export const Day = styled.div`
-  padding-left: 2rem;
-  font-size: 2rem;
+  padding-left: 0;
+  font-size: 1.7rem;
   font-weight: bold;
 `;
 

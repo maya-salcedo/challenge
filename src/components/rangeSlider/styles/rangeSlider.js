@@ -98,6 +98,6 @@ export const TimeRange = styled.div`
   color: black;
   font-size: 1.5rem;
   margin-top: -2.9rem;
-  left: 210px;
+  left: 180px;
   padding: 2px;
 `;
