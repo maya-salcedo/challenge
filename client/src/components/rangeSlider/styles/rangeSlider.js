@@ -58,7 +58,7 @@ export const Slider = styled.div`
   position: relative;
   width: 500px;
 
-  .slider__range {
+  .red {
     position: absolute;
     border-radius: 3px;
     height: 5px;
