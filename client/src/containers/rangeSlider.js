@@ -70,9 +70,9 @@ export function MultiRangeSlider({ min, max, onChange }) {
       <RangeSlider.Slider>
         <RangeSlider.Track />
         <div ref={range} className="slider__range" />
-        <RangeSlider.Value>
+        <RangeSlider.TimeRange>
           {`${minVal}:00`} - {maxVal === 24 ? '23:59' : `${maxVal}:00`}
-        </RangeSlider.Value>
+        </RangeSlider.TimeRange>
       </RangeSlider.Slider>
     </RangeSlider>
   );

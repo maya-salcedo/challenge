@@ -6,7 +6,7 @@ import {
   Range,
   Slider,
   Track,
-  Value,
+  TimeRange,
 } from './styles/rangeSlider';
 
 export default function RangerSlider({ children, ...restProps }) {
@@ -39,6 +39,9 @@ RangerSlider.Range = function RangerSliderRange({ children, ...restProps }) {
   return <Range {...restProps}>{children}</Range>;
 };
 
-RangerSlider.Value = function RangerSliderValue({ children, ...restProps }) {
-  return <Value {...restProps}>{children}</Value>;
+RangerSlider.TimeRange = function RangerSliderTimeRange({
+  children,
+  ...restProps
+}) {
+  return <TimeRange {...restProps}>{children}</TimeRange>;
 };

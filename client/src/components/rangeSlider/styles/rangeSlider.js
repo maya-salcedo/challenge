@@ -14,12 +14,12 @@ export const Input = styled.input`
   width: 500px;
   outline: none;
 
-  ::-webkit-slider-thumb {
+  &::-webkit-slider-thumb {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
   }
 
-  ::-webkit-slider-thumb {
+  &::-webkit-slider-thumb {
     background-color: #f1f5f7;
     border: none;
     border-radius: 50%;
@@ -32,7 +32,7 @@ export const Input = styled.input`
     position: relative;
   }
 
-  ::-moz-range-thumb {
+  &::-moz-range-thumb {
     background-color: #f1f5f7;
     border: none;
     border-radius: 50%;
@@ -84,11 +84,11 @@ export const Range = styled.div`
   z-index: 5;
 `;
 
-export const Value = styled.div`
+export const TimeRange = styled.div`
   position: absolute;
   color: black;
-  font-size: 12px;
-  margin-top: -20px;
-  background-color: antiquewhite;
+  font-size: 1.5rem;
+  margin-top: -2.9rem;
   left: 210px;
+  padding: 2px;
 `;

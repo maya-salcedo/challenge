@@ -16,7 +16,7 @@ export function ContentContainer() {
   return (
     <Content>
       <Content.Base>
-        <Content.Title>I'm weekly available at</Content.Title>
+        <Content.Title>My Free Time</Content.Title>
         <Content.Frame>
           {daysOfWeek.map((day) => {
             return (
