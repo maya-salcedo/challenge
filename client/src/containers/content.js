@@ -1,5 +1,6 @@
 import React from 'react';
 import { Content } from '../components';
+import { MultiRangeSlider } from './rangeSlider';
 
 const daysOfWeek = [
   'Monday',
@@ -11,7 +12,7 @@ const daysOfWeek = [
   'Sunday',
 ];
 
-export function ContentContainer({ children }) {
+export function ContentContainer() {
   return (
     <Content>
       <Content.Base>
@@ -21,7 +22,13 @@ export function ContentContainer({ children }) {
             return (
               <Content.Group key={day}>
                 <Content.Day>{day}</Content.Day>
-                {children}
+                <MultiRangeSlider
+                  min={0}
+                  max={24}
+                  onChange={({ min, max }) =>
+                    console.log(`min = ${min}, max = ${max}`)
+                  }
+                />
               </Content.Group>
             );
           })}
