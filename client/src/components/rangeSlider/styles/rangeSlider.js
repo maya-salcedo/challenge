@@ -13,6 +13,8 @@ export const Input = styled.input`
   height: 0;
   width: 500px;
   outline: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;

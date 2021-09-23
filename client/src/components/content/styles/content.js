@@ -52,7 +52,7 @@ export const Day = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: #f2711c;
+  background-color: #79d70f;
   border-radius: 4px;
   font-size: 2rem;
   margin: 2rem 14rem 3rem;
@@ -61,7 +61,7 @@ export const Button = styled.button`
   color: white;
   cursor: pointer;
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.7;
 
   :hover {
     opacity: 1;

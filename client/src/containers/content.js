@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Content } from '../components';
 import { MultiRangeSlider } from './rangeSlider';
 
@@ -13,8 +13,6 @@ const daysOfWeek = [
 ];
 
 export function ContentContainer() {
-  const [active, setActive] = useState('red');
-  console.log(active);
   return (
     <Content>
       <Content.Base>
@@ -29,9 +27,7 @@ export function ContentContainer() {
                   max={24}
                   onChange={({ min, max }) => {
                     console.log(`min = ${min}, max = ${max}`);
-                    setActive('green');
                   }}
-                  className={active}
                 />
               </Content.Group>
             );
