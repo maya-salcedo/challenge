@@ -9,6 +9,5 @@ export const GlobalStyle = createGlobalStyle`
     color: #00000;
     font-size: 16px;
     margin: 0;
-    padding: 0;
   }
 `;

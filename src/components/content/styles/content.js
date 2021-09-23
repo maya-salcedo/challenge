@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: auto;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 `;
 
 export const Base = styled.div`
@@ -11,7 +14,7 @@ export const Base = styled.div`
   padding: 1rem 3rem 3rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   width: min-content;
-  margin: auto;
+  margin: 10rem auto 10rem auto;
 
   @media (max-width: 1000px) {
     padding: 0.5rem 1rem 1.5rem;
