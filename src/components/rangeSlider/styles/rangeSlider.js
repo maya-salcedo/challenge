@@ -63,7 +63,7 @@ export const Slider = styled.div`
   .red {
     position: absolute;
     border-radius: 3px;
-    height: 5px;
+    height: 7px;
     background-color: red;
     z-index: 2;
   }
@@ -71,7 +71,7 @@ export const Slider = styled.div`
   .green {
     position: absolute;
     border-radius: 3px;
-    height: 5px;
+    height: 7px;
     background-color: #79d70f;
     z-index: 2;
   }
@@ -80,7 +80,7 @@ export const Slider = styled.div`
 export const Track = styled.div`
   position: absolute;
   border-radius: 3px;
-  height: 5px;
+  height: 7px;
   background-color: #ced4da;
   width: 100%;
   z-index: 1;
@@ -90,7 +90,6 @@ export const Range = styled.div`
   position: absolute;
   border-radius: 3px;
   height: 5px;
-  background-color: #79d70f;
   z-index: 5;
 `;
 

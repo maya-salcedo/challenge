@@ -49,8 +49,8 @@ export const Group = styled.div`
 `;
 
 export const Day = styled.div`
-  padding-left: 2.3rem;
-  font-size: 1.6rem;
+  padding-left: 2rem;
+  font-size: 2rem;
   font-weight: bold;
 `;
 
