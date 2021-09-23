@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { RangeSlider } from '../components';
 
-export function MultiRangeSlider({ min, max, onChange }) {
+export function MultiRangeSlider({ min, max, onChange, className }) {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);
@@ -69,7 +69,7 @@ export function MultiRangeSlider({ min, max, onChange }) {
 
       <RangeSlider.Slider>
         <RangeSlider.Track />
-        <div ref={range} className="slider__range" />
+        <div ref={range} className={className} />
         <RangeSlider.TimeRange>
           {`${minVal}:00`} - {maxVal === 24 ? '23:59' : `${maxVal}:00`}
         </RangeSlider.TimeRange>

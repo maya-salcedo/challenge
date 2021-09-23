@@ -12,15 +12,9 @@ export const Base = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   width: min-content;
   margin: auto;
-  margin-top: 5rem;
 
   @media (max-width: 1000px) {
     padding: 0.5rem 1rem 1.5rem;
-    margin-top: 4rem;
-  }
-
-  @media (max-width: 890px) {
-    margin-top: auto;
   }
 
   @media (max-width: 700px) {
@@ -37,7 +31,7 @@ export const Frame = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 2rem 4rem 0rem 4rem;
   margin-left: 3rem;
 `;
@@ -52,8 +46,8 @@ export const Group = styled.div`
 `;
 
 export const Day = styled.div`
-  padding-left: 2rem;
-  font-size: 1.7rem;
+  padding-left: 2.3rem;
+  font-size: 1.6rem;
   font-weight: bold;
 `;
 

@@ -62,6 +62,14 @@ export const Slider = styled.div`
     position: absolute;
     border-radius: 3px;
     height: 5px;
+    background-color: red;
+    z-index: 2;
+  }
+
+  .green {
+    position: absolute;
+    border-radius: 3px;
+    height: 5px;
     background-color: #79d70f;
     z-index: 2;
   }
