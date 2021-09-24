@@ -75,7 +75,7 @@ export const DayCheckboxLabel = styled(Row)`
   }
 
   @media (max-width: 410px) {
-    width: 8rem;
+    width: 7rem;
     padding-left: 0.5rem;
   }
 `;
@@ -275,5 +275,10 @@ export const TimeRange = styled.div`
       padding-bottom: 0;
       padding-top: 0.6rem;
     }
+  }
+
+  @media (max-width: 410px) {
+    max-width: 8rem;
+    padding-left: 0;
   }
 `;
