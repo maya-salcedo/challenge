@@ -75,7 +75,7 @@ export const DayCheckboxLabel = styled(Row)`
   }
 
   @media (max-width: 410px) {
-    width: 7rem;
+    width: 7.5rem;
     padding-left: 0.5rem;
   }
 `;
