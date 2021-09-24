@@ -5,7 +5,7 @@ import { RangeSlider } from '../components';
 export function MultiRangeSlider({ min, max, onChange }) {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
-  const [active, setActive] = useState('red');
+  const [disableSlider, setDisableSlider] = useState(true);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
   const range = useRef(null);
@@ -44,8 +44,13 @@ export function MultiRangeSlider({ min, max, onChange }) {
 
   return (
     <RangeSlider>
+      <input
+        type="checkbox"
+        onChange={() => setDisableSlider(!disableSlider)}
+      />
       <RangeSlider.InputLeft
         type="range"
+        disabled={disableSlider}
         min={min}
         max={max}
         value={minVal}
@@ -53,12 +58,12 @@ export function MultiRangeSlider({ min, max, onChange }) {
           const value = Math.min(Number(event.target.value), maxVal - 1);
           setMinVal(value);
           minValRef.current = value;
-          setActive('green');
         }}
         style={{ zIndex: minVal > max - 100 && '5' }}
       />
       <RangeSlider.InputRight
         type="range"
+        disabled={disableSlider}
         min={min}
         max={max}
         value={maxVal}
@@ -66,13 +71,12 @@ export function MultiRangeSlider({ min, max, onChange }) {
           const value = Math.max(Number(event.target.value), minVal + 1);
           setMaxVal(value);
           maxValRef.current = value;
-          setActive('green');
         }}
       />
 
       <RangeSlider.Slider>
         <RangeSlider.Track />
-        <div ref={range} className={active} />
+        <div ref={range} className={disableSlider ? 'red' : 'green'} />
         <RangeSlider.TimeRange>
           {`${minVal}:00`} - {maxVal === 24 ? '23:59' : `${maxVal}:00`}
         </RangeSlider.TimeRange>

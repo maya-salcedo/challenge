@@ -46,6 +46,10 @@ export const Input = styled.input`
     pointer-events: all;
     position: relative;
   }
+
+  @media (max-width: 851px) {
+    width: 400px;
+  }
 `;
 
 export const InputLeft = styled(Input)`
@@ -66,6 +70,7 @@ export const Slider = styled.div`
     height: 7px;
     background-color: red;
     z-index: 2;
+    opacity: 0.5;
   }
 
   .green {
@@ -74,6 +79,10 @@ export const Slider = styled.div`
     height: 7px;
     background-color: #79d70f;
     z-index: 2;
+  }
+
+  @media (max-width: 851px) {
+    width: 400px;
   }
 `;
 

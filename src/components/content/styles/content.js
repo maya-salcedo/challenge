@@ -9,14 +9,18 @@ export const Container = styled.div`
   width: min-content;
   margin: 5rem auto;
 
-  @media (max-width: 1000px) {
-    padding: 0.5rem 1rem 1.5rem;
-    margin: 2rem auto;
+  @media (max-width: 1100px) {
+    width: 45rem;
+    padding: 1rem;
   }
 
-  @media (max-width: 700px) {
-    padding: 0.1rem 0.1rem 1rem;
-    margin: 0.2rem;
+  @media (max-width: 926px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 855px) {
+    width: 35rem;
+    padding: 0.8rem;
   }
 `;
 
@@ -26,6 +30,15 @@ export const Frame = styled.div`
   height: auto;
   margin: 2rem 4rem;
   border-radius: 1rem;
+
+  @media (max-width: 1100px) {
+    margin: 2rem;
+  }
+
+  @media (max-width: 833px) {
+    margin: auto;
+    width: 38rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -40,6 +53,23 @@ export const Group = styled.div`
 
   :first-of-type {
     padding-top: 5rem;
+  }
+
+  @media (max-width: 934px) {
+    padding: 1rem 5rem;
+    margin: 0;
+  }
+
+  @media (max-width: 922px) {
+    padding: 1rem 3rem;
+    margin: 0;
+    :first-of-type {
+      padding-top: 3rem;
+    }
+  }
+
+  @media (max-width: 843px) {
+    padding: 1rem;
   }
 `;
 
