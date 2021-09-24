@@ -31,8 +31,8 @@ export function ContentContainer() {
             </Content.Group>
           );
         })}
-        <Content.Button>Save</Content.Button>
       </Content.Frame>
+      <Content.Button>Save</Content.Button>
     </Content>
   );
 }

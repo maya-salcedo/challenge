@@ -50,7 +50,7 @@ export const DayCheckboxLabel = styled(Row)`
 
   @media (max-width: 860px) {
     width: 10rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 `;
 
@@ -208,7 +208,7 @@ export const Range = styled.div`
 export const TimeRange = styled.div`
   > p {
     color: black;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 0;
     padding: 1rem 1rem 0 0;
 

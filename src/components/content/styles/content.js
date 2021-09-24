@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-content: start;
   box-sizing: content-box;
   background-color: #e6e6e6;
   border-radius: 0.5rem;
@@ -20,7 +26,7 @@ export const Container = styled.div`
 
   @media (max-width: 855px) {
     width: 35rem;
-    padding: 0.8rem;
+    padding: 1rem;
   }
 `;
 
@@ -40,27 +46,31 @@ export const Frame = styled.div`
     width: 35rem;
   }
 
-  @media (max-width: 860px) {
-    width: 32rem;
+  @media (max-width: 855px) {
+    width: 33rem;
   }
 `;
 
 export const Title = styled.h1`
   font-size: 3rem;
-  padding: 2rem 4rem 0rem 4rem;
-  margin-left: 3rem;
+  padding-top: 2rem;
 
   @media (max-width: 1100px) {
-    padding-left: 2.5rem;
+    padding-top: 1rem;
+    margin-bottom: 0;
   }
 `;
 
 export const Group = styled.div`
-  padding: 1rem 2rem 2.5rem;
+  padding: 1rem 2.3rem 2.5rem;
   width: 40rem;
 
   :first-of-type {
     padding-top: 5rem;
+  }
+
+  :last-of-type {
+    padding-bottom: 6rem;
   }
 
   @media (max-width: 1100px) {
@@ -74,6 +84,14 @@ export const Group = styled.div`
   }
 
   @media (max-width: 860px) {
+    padding-left: 2.8rem;
+    :first-of-type {
+      padding-top: 3rem;
+    }
+  }
+
+  @media (max-width: 850px) {
+    padding-left: 2.2rem;
     :first-of-type {
       padding-top: 3rem;
     }
@@ -84,8 +102,8 @@ export const Button = styled.button`
   background-color: #79d70f;
   border-radius: 4px;
   font-size: 2rem;
-  margin: 2rem 14rem 3rem;
   padding: 0.5rem 5rem;
+  margin: 1rem;
   border: 0;
   color: white;
   cursor: pointer;
