@@ -105,7 +105,7 @@ export const CheckboxIcon = styled.svg`
   padding-bottom: 1rem;
 
   @media (max-width: 410px) {
-    padding-bottom: 0;
+    padding-bottom: 0.5rem;
   }
 `;
 

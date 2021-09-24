@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { RangeSlider } from '../components';
 
-export function MultiRangeSlider({ min, max, onChange, day }) {
+export function MultiRangeSlider({ min, max, day }) {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const [checked, setChecked] = useState(false);
@@ -17,7 +17,6 @@ export function MultiRangeSlider({ min, max, onChange, day }) {
     [min, max]
   );
 
-  // Set width of the range to decrease from the left side
   useEffect(() => {
     const minPercent = getPercent(minVal);
     const maxPercent = getPercent(maxValRef.current);
@@ -28,7 +27,6 @@ export function MultiRangeSlider({ min, max, onChange, day }) {
     }
   }, [minVal, getPercent]);
 
-  // Set width of the range to decrease from the right side
   useEffect(() => {
     const minPercent = getPercent(minValRef.current);
     const maxPercent = getPercent(maxVal);
@@ -37,11 +35,6 @@ export function MultiRangeSlider({ min, max, onChange, day }) {
       range.current.style.width = `${maxPercent - minPercent}%`;
     }
   }, [maxVal, getPercent]);
-
-  // Get min and max values when their state changes
-  useEffect(() => {
-    onChange({ min: minVal, max: maxVal });
-  }, [minVal, maxVal, onChange]);
 
   return (
     <RangeSlider>
