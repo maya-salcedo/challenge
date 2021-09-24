@@ -34,7 +34,24 @@ export const Container = styled.div`
   }
 
   @media (max-width: 600px) {
-    margin-top: 0;
+    width: 32rem;
+  }
+
+  @media (max-width: 570px) {
+    width: 30rem;
+  }
+
+  @media (max-width: 540px) {
+    width: 26rem;
+  }
+
+  @media (max-width: 470px) {
+    width: 22rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 18rem;
+    padding: 0.5rem;
   }
 `;
 
@@ -57,6 +74,22 @@ export const Frame = styled.div`
   @media (max-width: 855px) {
     width: 33rem;
   }
+
+  @media (max-width: 600px) {
+    width: 30rem;
+  }
+
+  @media (max-width: 540px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 470px) {
+    width: 22rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 16rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -66,6 +99,10 @@ export const Title = styled.h1`
   @media (max-width: 1100px) {
     padding-top: 1rem;
     margin-bottom: 0;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 2rem;
   }
 `;
 
@@ -103,6 +140,22 @@ export const Group = styled.div`
     :first-of-type {
       padding-top: 3rem;
     }
+  }
+  @media (max-width: 600px) {
+    padding-left: 0.6rem;
+  }
+
+  @media (max-width: 540px) {
+    padding-left: 0.1rem;
+    width: 20rem;
+  }
+
+  @media (max-width: 470px) {
+    width: 18rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 16rem;
   }
 `;
 

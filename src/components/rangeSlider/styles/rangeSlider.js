@@ -24,6 +24,19 @@ export const Row = styled.div`
   @media (max-width: 860px) {
     width: 29rem;
   }
+
+  @media (max-width: 540px) {
+    padding-left: 0.1rem;
+    width: 25rem;
+  }
+
+  @media (max-width: 470px) {
+    width: 21rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 16rem;
+  }
 `;
 
 export const DayCheckboxLabel = styled(Row)`
@@ -36,6 +49,10 @@ export const DayCheckboxLabel = styled(Row)`
 
     @media (max-width: 860px) {
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 410px) {
+      font-size: 0.9rem;
     }
   }
 
@@ -51,6 +68,15 @@ export const DayCheckboxLabel = styled(Row)`
   @media (max-width: 860px) {
     width: 10rem;
     padding-left: 2rem;
+  }
+
+  @media (max-width: 470px) {
+    padding-left: 1rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 8rem;
+    padding-left: 0.5rem;
   }
 `;
 
@@ -77,6 +103,10 @@ export const CheckboxIcon = styled.svg`
   stroke: white;
   stroke-width: 5px;
   padding-bottom: 1rem;
+
+  @media (max-width: 410px) {
+    padding-bottom: 0;
+  }
 `;
 
 export const StyledDayCheckbox = styled.div`
@@ -99,6 +129,10 @@ export const StyledDayCheckbox = styled.div`
 
   ${CheckboxIcon} {
     visibility: ${(props) => (props.checked ? 'visible' : 'hidden')};
+  }
+
+  @media (max-width: 410px) {
+    margin: 0.5rem;
   }
 `;
 
@@ -149,6 +183,14 @@ export const Input = styled.input`
   @media (max-width: 930px) {
     width: 27rem;
   }
+
+  @media (max-width: 540px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 14rem;
+  }
 `;
 
 export const InputLeft = styled(Input)`
@@ -187,6 +229,14 @@ export const Slider = styled.div`
   @media (max-width: 930px) {
     width: 27rem;
   }
+
+  @media (max-width: 540px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 410px) {
+    width: 14rem;
+  }
 `;
 
 export const Track = styled.div`
@@ -215,6 +265,15 @@ export const TimeRange = styled.div`
     @media (max-width: 860px) {
       font-size: 1rem;
       padding: 1.3rem 1.5rem;
+    }
+
+    @media (max-width: 410px) {
+      padding-left: 0.5rem;
+    }
+
+    @media (max-width: 410px) {
+      padding-bottom: 0;
+      padding-top: 0.6rem;
     }
   }
 `;
