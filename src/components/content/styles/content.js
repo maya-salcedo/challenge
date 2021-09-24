@@ -14,7 +14,7 @@ export const Container = styled.div`
     padding: 1rem;
   }
 
-  @media (max-width: 926px) {
+  @media (max-width: 930px) {
     width: 40rem;
   }
 
@@ -32,12 +32,16 @@ export const Frame = styled.div`
   border-radius: 1rem;
 
   @media (max-width: 1100px) {
-    margin: 2rem;
+    margin: 1.5rem;
+    width: 42rem;
   }
 
-  @media (max-width: 833px) {
-    margin: auto;
-    width: 38rem;
+  @media (max-width: 930px) {
+    width: 35rem;
+  }
+
+  @media (max-width: 860px) {
+    width: 32rem;
   }
 `;
 
@@ -45,6 +49,10 @@ export const Title = styled.h1`
   font-size: 3rem;
   padding: 2rem 4rem 0rem 4rem;
   margin-left: 3rem;
+
+  @media (max-width: 1100px) {
+    padding-left: 2.5rem;
+  }
 `;
 
 export const Group = styled.div`
@@ -55,21 +63,20 @@ export const Group = styled.div`
     padding-top: 5rem;
   }
 
-  @media (max-width: 934px) {
-    padding: 1rem 5rem;
-    margin: 0;
+  @media (max-width: 1100px) {
+    padding-left: 1rem;
+    width: 34rem;
   }
 
-  @media (max-width: 922px) {
-    padding: 1rem 3rem;
-    margin: 0;
+  @media (max-width: 992px) {
+    padding-left: 1rem;
+    width: 30rem;
+  }
+
+  @media (max-width: 860px) {
     :first-of-type {
       padding-top: 3rem;
     }
-  }
-
-  @media (max-width: 843px) {
-    padding: 1rem;
   }
 `;
 

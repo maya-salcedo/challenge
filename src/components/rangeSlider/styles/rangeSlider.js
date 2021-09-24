@@ -16,6 +16,14 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: ${(props) => (props.center ? 'center' : 'start')};
   width: 40rem;
+
+  @media (max-width: 930px) {
+    width: 33rem;
+  }
+
+  @media (max-width: 860px) {
+    width: 29rem;
+  }
 `;
 
 export const DayCheckboxLabel = styled(Row)`
@@ -25,6 +33,24 @@ export const DayCheckboxLabel = styled(Row)`
     font-size: 1.5rem;
     font-weight: bold;
     color: #393e46;
+
+    @media (max-width: 860px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 992px) {
+    width: 13rem;
+    padding-left: 2.5rem;
+  }
+
+  @media (max-width: 860px) {
+    width: 10rem;
+    padding-left: 1rem;
   }
 `;
 
@@ -116,8 +142,12 @@ export const Input = styled.input`
     position: relative;
   }
 
-  @media (max-width: 851px) {
-    width: 400px;
+  @media (max-width: 1100px) {
+    width: 34rem;
+  }
+
+  @media (max-width: 930px) {
+    width: 27rem;
   }
 `;
 
@@ -150,8 +180,12 @@ export const Slider = styled.div`
     z-index: 2;
   }
 
-  @media (max-width: 851px) {
-    width: 400px;
+  @media (max-width: 1100px) {
+    width: 34rem;
+  }
+
+  @media (max-width: 930px) {
+    width: 27rem;
   }
 `;
 
@@ -177,5 +211,10 @@ export const TimeRange = styled.div`
     font-size: 1.8rem;
     margin: 0;
     padding: 1rem 1rem 0 0;
+
+    @media (max-width: 860px) {
+      font-size: 1rem;
+      padding: 1.3rem 1.5rem;
+    }
   }
 `;
