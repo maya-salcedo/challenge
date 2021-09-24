@@ -12,11 +12,16 @@ import {
   StyledDayCheckbox,
   CheckboxContainer,
   CheckboxIcon,
+  Row,
 } from './styles/rangeSlider';
 
 export default function RangeSlider({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
+
+RangeSlider.Row = function RangerSliderRow({ children, ...restProps }) {
+  return <Row {...restProps}>{children}</Row>;
+};
 
 RangeSlider.DayCheckboxLabel = function RangerSliderDayCheckboxLabel({
   children,

@@ -45,48 +45,54 @@ export function MultiRangeSlider({ min, max, onChange, day }) {
 
   return (
     <RangeSlider>
-      <RangeSlider.DayCheckboxLabel label={day}>
-        <RangeSlider.DayCheckbox
-          checked={checked}
-          onChange={() => {
-            setChecked(!checked);
-            setDisableSlider(!disableSlider);
+      <RangeSlider.Row>
+        <RangeSlider.DayCheckboxLabel label={day}>
+          <RangeSlider.DayCheckbox
+            checked={checked}
+            onChange={() => {
+              setChecked(!checked);
+              setDisableSlider(!disableSlider);
+            }}
+          />
+        </RangeSlider.DayCheckboxLabel>
+        <RangeSlider.TimeRange>
+          <p>
+            {`${minVal}:00`} - {maxVal === 24 ? '23:59' : `${maxVal}:00`}
+          </p>
+        </RangeSlider.TimeRange>
+      </RangeSlider.Row>
+      <RangeSlider.Row center>
+        <RangeSlider.InputLeft
+          type="range"
+          disabled={disableSlider}
+          min={min}
+          max={max}
+          value={minVal}
+          onChange={(event) => {
+            const value = Math.min(Number(event.target.value), maxVal - 1);
+            setMinVal(value);
+            minValRef.current = value;
+          }}
+          style={{ zIndex: minVal > max - 100 && '5' }}
+        />
+        <RangeSlider.InputRight
+          type="range"
+          disabled={disableSlider}
+          min={min}
+          max={max}
+          value={maxVal}
+          onChange={(event) => {
+            const value = Math.max(Number(event.target.value), minVal + 1);
+            setMaxVal(value);
+            maxValRef.current = value;
           }}
         />
-      </RangeSlider.DayCheckboxLabel>
-      <RangeSlider.InputLeft
-        type="range"
-        disabled={disableSlider}
-        min={min}
-        max={max}
-        value={minVal}
-        onChange={(event) => {
-          const value = Math.min(Number(event.target.value), maxVal - 1);
-          setMinVal(value);
-          minValRef.current = value;
-        }}
-        style={{ zIndex: minVal > max - 100 && '5' }}
-      />
-      <RangeSlider.InputRight
-        type="range"
-        disabled={disableSlider}
-        min={min}
-        max={max}
-        value={maxVal}
-        onChange={(event) => {
-          const value = Math.max(Number(event.target.value), minVal + 1);
-          setMaxVal(value);
-          maxValRef.current = value;
-        }}
-      />
 
-      <RangeSlider.Slider>
-        <RangeSlider.Track />
-        <div ref={range} className={disableSlider ? 'red' : 'green'} />
-        <RangeSlider.TimeRange>
-          {`${minVal}:00`} - {maxVal === 24 ? '23:59' : `${maxVal}:00`}
-        </RangeSlider.TimeRange>
-      </RangeSlider.Slider>
+        <RangeSlider.Slider>
+          <RangeSlider.Track />
+          <div ref={range} className={disableSlider ? 'red' : 'green'} />
+        </RangeSlider.Slider>
+      </RangeSlider.Row>
     </RangeSlider>
   );
 }

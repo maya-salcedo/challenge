@@ -26,7 +26,7 @@ export const Container = styled.div`
 
 export const Frame = styled.div`
   background-color: #fcfcfc;
-  width: auto;
+  width: 45rem;
   height: auto;
   margin: 2rem 4rem;
   border-radius: 1rem;
@@ -42,14 +42,14 @@ export const Frame = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 2rem 4rem 0rem 4rem;
   margin-left: 3rem;
 `;
 
 export const Group = styled.div`
-  padding: 1rem 6rem;
-  width: 30rem;
+  padding: 1rem 2rem 2.5rem;
+  width: 40rem;
 
   :first-of-type {
     padding-top: 5rem;

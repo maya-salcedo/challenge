@@ -1,14 +1,30 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 2rem;
+  height: 3rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: auto;
+  align-content: start;
 `;
 
-export const DayCheckboxLabel = styled.div`
+export const Row = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: ${(props) => (props.center ? 'center' : 'start')};
+  width: 40rem;
+`;
+
+export const DayCheckboxLabel = styled(Row)`
+  width: 15rem;
+  padding-left: 1rem;
   > label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #393e46;
   }
 `;
 
@@ -33,13 +49,15 @@ export const HiddenDayCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
 export const CheckboxIcon = styled.svg`
   fill: none;
   stroke: white;
-  stroke-width: 3px;
+  stroke-width: 5px;
+  padding-bottom: 1rem;
 `;
 
 export const StyledDayCheckbox = styled.div`
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 1rem;
   background: ${(props) => (props.checked ? '#79d70f' : 'red')};
   opacity: ${(props) => (props.checked ? 0.8 : 0.5)};
   border-radius: 3px;
@@ -62,7 +80,7 @@ export const Input = styled.input`
   pointer-events: none;
   position: absolute;
   height: 0;
-  width: 500px;
+  width: 38rem;
   outline: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
@@ -113,7 +131,7 @@ export const InputRight = styled(Input)`
 
 export const Slider = styled.div`
   position: relative;
-  width: 500px;
+  width: 38rem;
 
   .red {
     position: absolute;
@@ -154,10 +172,10 @@ export const Range = styled.div`
 `;
 
 export const TimeRange = styled.div`
-  position: absolute;
-  color: black;
-  font-size: 1.5rem;
-  margin-top: -2.9rem;
-  left: 180px;
-  padding: 2px;
+  > p {
+    color: black;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 1rem 1rem 0 0;
+  }
 `;
