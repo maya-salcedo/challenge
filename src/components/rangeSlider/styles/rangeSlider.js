@@ -7,14 +7,54 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const DayCheckbox = styled.div`
-  display: inline-block;
-  width: 20rem;
-  font-size: 1.7rem;
-  font-weight: bold;
-  > input {
-  }
+export const DayCheckboxLabel = styled.div`
   > label {
+  }
+`;
+
+export const CheckboxContainer = styled.div`
+  display: inline-block;
+  vertical-align: middle;
+`;
+
+export const HiddenDayCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
+  border: 0;
+  clip: rect(0 0 0 0);
+  clippath: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+`;
+
+export const CheckboxIcon = styled.svg`
+  fill: none;
+  stroke: white;
+  stroke-width: 3px;
+`;
+
+export const StyledDayCheckbox = styled.div`
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: ${(props) => (props.checked ? '#79d70f' : 'red')};
+  opacity: ${(props) => (props.checked ? 0.8 : 0.5)};
+  border-radius: 3px;
+  transition: all 150ms;
+
+  ${HiddenDayCheckboxInput}:focus + & {
+    box-shadow: 0 0 0 3px #e6e6e6;
+  }
+
+  ${HiddenDayCheckboxInput}:hover + & {
+    opacity: 1;
+  }
+
+  ${CheckboxIcon} {
+    visibility: ${(props) => (props.checked ? 'visible' : 'hidden')};
   }
 `;
 

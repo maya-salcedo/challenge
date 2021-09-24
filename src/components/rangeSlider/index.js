@@ -7,18 +7,46 @@ import {
   Slider,
   Track,
   TimeRange,
-  DayCheckbox,
+  DayCheckboxLabel,
+  HiddenDayCheckboxInput,
+  StyledDayCheckbox,
+  CheckboxContainer,
+  CheckboxIcon,
 } from './styles/rangeSlider';
 
 export default function RangeSlider({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-RangeSlider.DayCheckbox = function RangerSliderDayCheckbox({
+RangeSlider.DayCheckboxLabel = function RangerSliderDayCheckboxLabel({
   children,
+  label,
   ...restProps
 }) {
-  return <DayCheckbox {...restProps}>{children}</DayCheckbox>;
+  return (
+    <DayCheckboxLabel {...restProps}>
+      <label {...restProps}>
+        {children}
+        {label}
+      </label>
+    </DayCheckboxLabel>
+  );
+};
+
+RangeSlider.DayCheckbox = function RangerSliderDayCheckbox({
+  checked,
+  ...restProps
+}) {
+  return (
+    <CheckboxContainer>
+      <HiddenDayCheckboxInput checked={checked} {...restProps} />
+      <StyledDayCheckbox checked={checked}>
+        <CheckboxIcon viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12" />
+        </CheckboxIcon>
+      </StyledDayCheckbox>
+    </CheckboxContainer>
+  );
 };
 
 RangeSlider.InputLeft = function RangerSliderInputLeft({
