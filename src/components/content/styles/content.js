@@ -28,6 +28,14 @@ export const Container = styled.div`
     width: 35rem;
     padding: 1rem;
   }
+
+  @media (max-width: 766px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 0;
+  }
 `;
 
 export const Frame = styled.div`
