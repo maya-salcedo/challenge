@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { RangeSlider } from '../components';
 
-export function MultiRangeSlider({ min, max, onChange }) {
+export function MultiRangeSlider({ min, max, onChange, day }) {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const [disableSlider, setDisableSlider] = useState(true);
@@ -44,10 +44,14 @@ export function MultiRangeSlider({ min, max, onChange }) {
 
   return (
     <RangeSlider>
-      <input
-        type="checkbox"
-        onChange={() => setDisableSlider(!disableSlider)}
-      />
+      <RangeSlider.DayCheckbox>
+        <input
+          type="checkbox"
+          id="day"
+          onChange={() => setDisableSlider(!disableSlider)}
+        />
+        <label for="day">{day}</label>
+      </RangeSlider.DayCheckbox>
       <RangeSlider.InputLeft
         type="range"
         disabled={disableSlider}

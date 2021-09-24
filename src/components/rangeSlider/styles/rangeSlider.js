@@ -7,6 +7,17 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
+export const DayCheckbox = styled.div`
+  display: inline-block;
+  width: 20rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  > input {
+  }
+  > label {
+  }
+`;
+
 export const Input = styled.input`
   pointer-events: none;
   position: absolute;

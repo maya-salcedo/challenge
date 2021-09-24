@@ -73,12 +73,6 @@ export const Group = styled.div`
   }
 `;
 
-export const Day = styled.div`
-  padding-left: 0;
-  font-size: 1.7rem;
-  font-weight: bold;
-`;
-
 export const Button = styled.button`
   background-color: #79d70f;
   border-radius: 4px;

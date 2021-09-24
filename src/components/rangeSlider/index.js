@@ -7,39 +7,47 @@ import {
   Slider,
   Track,
   TimeRange,
+  DayCheckbox,
 } from './styles/rangeSlider';
 
-export default function RangerSlider({ children, ...restProps }) {
+export default function RangeSlider({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-RangerSlider.InputLeft = function RangerSliderInputLeft({
+RangeSlider.DayCheckbox = function RangerSliderDayCheckbox({
+  children,
+  ...restProps
+}) {
+  return <DayCheckbox {...restProps}>{children}</DayCheckbox>;
+};
+
+RangeSlider.InputLeft = function RangerSliderInputLeft({
   children,
   ...restProps
 }) {
   return <InputLeft {...restProps}>{children}</InputLeft>;
 };
 
-RangerSlider.InputRight = function RangerSliderInputRight({
+RangeSlider.InputRight = function RangerSliderInputRight({
   children,
   ...restProps
 }) {
   return <InputRight {...restProps}>{children}</InputRight>;
 };
 
-RangerSlider.Slider = function RangerSliderSlider({ children, ...restProps }) {
+RangeSlider.Slider = function RangerSliderSlider({ children, ...restProps }) {
   return <Slider {...restProps}>{children}</Slider>;
 };
 
-RangerSlider.Track = function RangerSliderTrack({ children, ...restProps }) {
+RangeSlider.Track = function RangerSliderTrack({ children, ...restProps }) {
   return <Track {...restProps}>{children}</Track>;
 };
 
-RangerSlider.Range = function RangerSliderRange({ children, ...restProps }) {
+RangeSlider.Range = function RangerSliderRange({ children, ...restProps }) {
   return <Range {...restProps}>{children}</Range>;
 };
 
-RangerSlider.TimeRange = function RangerSliderTimeRange({
+RangeSlider.TimeRange = function RangerSliderTimeRange({
   children,
   ...restProps
 }) {

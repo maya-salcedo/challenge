@@ -20,8 +20,8 @@ export function ContentContainer() {
         {daysOfWeek.map((day) => {
           return (
             <Content.Group key={day}>
-              <Content.Day>{day}</Content.Day>
               <MultiRangeSlider
+                day={day}
                 min={0}
                 max={24}
                 onChange={({ min, max }) => {
